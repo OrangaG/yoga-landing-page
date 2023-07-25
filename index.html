@@ -5,10 +5,249 @@
     <link rel="stylesheet" href="./src/sass/styles.scss" />
     <link rel="icon" href="/favicon.png" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <title>Yoga App</title>
   </head>
   <body>
-    <div id="app">Hello world</div>
+    <div class="container">
+      <!-- Header section -->
+      <header class="nav">
+        <div class="nav__logo">Yoga</div>
+        <nav>
+          <ul class="nav__links">
+            <li>
+              <a href="#" class="nav__link">Home</a>
+            </li>
+            <li><a href="#" class="nav__link">Health</a></li>
+            <li><a href="#" class="nav__link">Routine</a></li>
+            <li><a href="#" class="nav__link">Follow</a></li>
+          </ul>
+          <i class="ri-apps-2-line"></i>
+          <i class="ri-close-fill"></i>
+        </nav>
+      </header>
+
+      <!-- Main section -->
+      <main class="main" id="home">
+        <div class="main__container grid">
+          <div class="main__details">
+            <h1 class="main__title">
+              Choose Your Best <span>Yoga</span> Teacher
+            </h1>
+            <div class="main__star"></div>
+            <div class="main__circle"></div>
+            <p class="main__description">
+              Calm your mind and body with the best yoga teachers available,
+              relax your day and stay positive.
+            </p>
+            <span class="main__btn btn--primary">
+              <a href="#" class="main__link">Get Started</a>
+              <i class="ri-arrow-right-line"></i>
+            </span>
+            <div class="main__info">
+              <div class="info__class">300+ Yoga Classes</div>
+              <div class="info__members">40+ Participants</div>
+            </div>
+          </div>
+          <img
+            src="/home-yoga.png"
+            alt="woman in a yoga position"
+            class="main__image"
+          />
+        </div>
+      </main>
+
+      <section class="influencers">
+        <div class="influencers__container grid">
+          <div class="influencers__image">
+            <p class="influencers__number">#01</p>
+            <img src="/list-yoga.png" alt="woman in a yoga position" />
+          </div>
+          <div class="influencers__info">
+            <div class="influencers__star"></div>
+            <p class="influencers__text">
+              Get a list of specific influencers in your niche at your
+              fingertips so you can focus on managing your status.
+            </p>
+            <div class="influencers__btn">
+              <div class="btn__outline"></div>
+              <span class="next__btn"
+                ><a href="#" class="next__btn__link">Next</a>
+                <i class="ri-arrow-right-line"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Health section -->
+      <section class="health" id="health">
+        <div class="health__container grid">
+          <div class="health__image__wrapper">
+            <div class="heart__info">
+              <div class="heart__icon"></div>
+              <i class="ri-heart-fill"></i>
+              <p class="heart__title">Heart Rate</p>
+              <p class="heart__number">168bpm</p>
+            </div>
+
+            <div class="health__courses">
+              <p class="courses__number">500+</p>
+              <p class="courses__description">Free Courses</p>
+            </div>
+
+            <img src="/health-fitness.png" alt="man exercising" />
+          </div>
+
+          <div class="health__info">
+            <h2 class="health__title">Bring Happiness To Good Health!</h2>
+            <p class="health__text">
+              If you take care of your good health, take care of your mentality
+              and lead a healthy life with positive thoughts every day.
+            </p>
+
+            <span class="btn--primary">
+              <a href="#" class="health__link">Let's Start</a>
+              <i class="ri-arrow-right-line"></i>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Routine section -->
+      <section class="routine" id="routine">
+        <div class="routine__container grid">
+          <div class="routine__info">
+            <h2 class="routine__title">Anytime, Any Place, Any Workout</h2>
+            <p class="routine__text">
+              Take your routine at any time of your day, with the new videos and
+              with the teachers who will guide you.
+            </p>
+            <span class="btn--primary">
+              <a href="#" class="routine__link">Get Started Free</a>
+              <i class="ri-arrow-right-line"></i>
+            </span>
+          </div>
+
+          <div class="routine__img__wrapper">
+            <img
+              src="/routine-yoga-1.png"
+              alt="woman stretching on the floor"
+              class="routine-img-1"
+            />
+            <img
+              src="/routine-yoga-2.png"
+              alt="woman jumping while bending backwards"
+              class="routine-img-2"
+            />
+            <span class="routine__tags">
+              <i class="ri-play-circle-fill"></i>
+              <p class="tags__text">High Quality Video</p>
+            </span>
+            <span class="routine__tags">
+              <i class="ri-run-line"></i>
+              <p class="tags__text">Professional Trainer</p>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Follow section -->
+      <section class="follow" id="follow">
+        <div class="follow__container grid">
+          <img
+            src="public/follow-yoga-1.png"
+            alt="woman stretching on the beach"
+          />
+          <div class="follow__text">
+            <h2 class="follow__title">
+              Follow Us On Instagram <span>#Yoga</span>
+            </h2>
+            <span class="btn--secondary">
+              <a href="#" class="follow__link">Follow</a>
+              <i class="ri-arrow-right-line"></i>
+            </span>
+          </div>
+          <img src="public/follow-yoga-2.png" alt="woman doing a yoga pose" />
+          <img
+            src="public/follow-yoga-3.png"
+            alt="woman stretching in a forest"
+          />
+          <img
+            src="public/follow-yoga-4.png"
+            alt="man doing a yoga pose on the beach"
+          />
+        </div>
+      </section>
+
+      <!-- Join section -->
+      <section class="join" id="join">
+        <div class="join__container">
+          <h2 class="join__title">Join our newsletter</h2>
+          <p class="join__text">
+            Subscribe to our newsletter to be aware of many things on discounts,
+            gifts, training and much more. Just enter your email.
+          </p>
+
+          <form action="#" method="post">
+            <input type="email" placeholder="For latest update send mail" />
+            <button class="join__btn btn--primary">
+              Subscribe <i class="ri-arrow-right-line"></i>
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <footer class="footer" id="footer">
+        <div class="footer__container grid">
+          <div class="footer__info">
+            <div class="footer__logo">Yoga</div>
+            <p class="footer__text">
+              Take care of your health and <br />
+              your mind with the best <br />
+              Yoga classes.
+            </p>
+          </div>
+
+          <div class="footer__contact__container">
+            <div class="footer__contact-info">
+              <h3 class="contact-info__title">Address</h3>
+              <p class="contact-info__text">
+                12345 M/01 Sol <br />
+                Avenue, Lima, Peru
+              </p>
+            </div>
+            <div class="footer__contact-info">
+              <h3 class="contact-info__title">Contact</h3>
+              <p class="contact-info__text">
+                +123 456 7890 <br />
+                yoga@email.com
+              </p>
+            </div>
+            <div class="footer__contact-info">
+              <h3 class="contact-info__title">Office</h3>
+              <p class="contact-info__text">
+                Monday - Saturday <br />
+                9AM - 10PM
+              </p>
+            </div>
+          </div>
+
+          <div class="footer__socials">
+            <i class="ri-facebook-circle-line"></i>
+            <i class="ri-twitter-line"></i>
+            <i class="ri-instagram-line"></i>
+            <i class="ri-youtube-line"></i>
+          </div>
+          <div class="footer__copy">
+            <p>&#169; Copyright Bedimcode. All rights reserved</p>
+          </div>
+        </div>
+      </footer>
+    </div>
 
     <!-- <script type="module" src="/main.js"></script> -->
   </body>
