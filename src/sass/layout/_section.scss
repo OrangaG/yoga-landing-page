@@ -1,0 +1,17 @@
+@use "../base/typography" as t;
+
+.section {
+  padding-block: 5rem 1rem;
+}
+
+.home__title,
+.section__title {
+  text-align: center;
+  font-size: t.$bigger-font-size;
+  font-family: t.$second-font;
+  margin-bottom: 1.5rem;
+}
+
+.home__title {
+  font-size: t.$biggest-font-size;
+}

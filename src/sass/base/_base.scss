@@ -1,0 +1,27 @@
+@use "../abstracts/colors" as c;
+@use "../base/typography" as t;
+@use "../abstracts/variables" as v;
+
+body,
+input,
+button {
+  font-family: t.$body-font;
+  font-size: t.$normal-font-size;
+}
+
+body {
+  background-color: c.$body-color;
+  color: c.$text-color;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: c.$title-color;
+  font-weight: t.$font-regular;
+}
+
+header {
+  height: v.$header-height;
+}
