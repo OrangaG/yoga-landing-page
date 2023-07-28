@@ -1,0 +1,9 @@
+@use "../abstracts/colors" as c;
+@use "../abstracts/variables" as v;
+.header {
+  display: grid;
+  position: fixed;
+  width: 100%;
+  height: v.$header-height;
+  background-color: c.$body-color;
+}

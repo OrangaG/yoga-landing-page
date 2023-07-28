@@ -1,0 +1,46 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/colors" as c;
+@use "../base/typography" as t;
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  font-size: t.$h2-font-size;
+}
+
+.nav__links {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+
+  position: fixed;
+  top: 0;
+  right: -100%;
+  transition: right 300ms;
+  padding: 4rem 1rem 0 3rem;
+  background-color: hsla(0, 0%, 100%, 0.3);
+  backdrop-filter: blur(24px);
+  height: 100vh;
+  width: 75%;
+  z-index: v.$z-fixed;
+}
+
+.ri-close-fill {
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.active {
+  right: 0;
+  transition: right 300ms;
+}
+
+.nav__menu-btn {
+  font-size: 1.5rem;
+}
