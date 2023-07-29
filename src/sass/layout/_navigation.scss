@@ -10,6 +10,10 @@
 
 .nav__logo {
   font-size: t.$h2-font-size;
+  background: c.$gradient-color;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .nav__links {
@@ -24,23 +28,33 @@
   padding: 4rem 1rem 0 3rem;
   background-color: hsla(0, 0%, 100%, 0.3);
   backdrop-filter: blur(24px);
-  height: 100vh;
+  height: 100%;
   width: 75%;
-  z-index: v.$z-fixed;
+}
+
+.nav__link {
+  color: c.$text-color;
+}
+
+.menu-btns {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav__moon-btn,
+.nav__menu-btn,
+.ri-close-fill {
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .ri-close-fill {
   position: fixed;
   top: 1rem;
   right: 1.5rem;
-  font-size: 1.5rem;
 }
 
 .active {
   right: 0;
   transition: right 300ms;
-}
-
-.nav__menu-btn {
-  font-size: 1.5rem;
 }

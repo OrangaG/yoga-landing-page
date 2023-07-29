@@ -19,9 +19,18 @@ h2,
 h3,
 h4 {
   color: c.$title-color;
-  font-weight: t.$font-regular;
+  font-weight: t.$font-medium;
 }
 
 header {
   height: v.$header-height;
+}
+
+button {
+  outline-color: transparent;
+  border: none;
+}
+
+input {
+  border: none;
 }

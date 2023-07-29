@@ -1,7 +1,13 @@
 @use "../base/typography" as t;
+@use "../abstracts/colors" as c;
 
 .section {
   padding-block: 5rem 1rem;
+}
+
+.home__container {
+  text-align: center;
+  row-gap: 4rem;
 }
 
 .home__title,
@@ -13,5 +19,90 @@
 }
 
 .home__title {
+  position: relative;
   font-size: t.$biggest-font-size;
+  line-height: 70px;
+  z-index: -1;
+
+  .home__box {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .home__colored-text {
+    background: c.$gradient-color;
+    padding: 0.3rem;
+    border-radius: 7px;
+    color: c.$body-color;
+    transform: rotate(10deg);
+  }
+}
+
+.home__container {
+  .home__circle {
+    margin-left: auto;
+    width: 20px;
+  }
+
+  .home__star {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 50px;
+    z-index: 1;
+  }
+}
+
+.home__btn {
+  margin-block: 2rem;
+}
+
+.home__info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info__num {
+  font-size: t.$h1-font-size;
+  font-weight: t.$font-medium;
+}
+
+// Influencers
+.influencers__container {
+  gap: 4rem;
+}
+.influencers__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.influencers__number {
+  color: c.$title-color;
+  font-size: t.$h1-font-size;
+  font-weight: t.$font-medium;
+}
+
+.image__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: c.$first-color-light;
+  border-radius: 100px;
+  height: 100px;
+  width: 200px;
+}
+
+.influencers__info {
+  position: relative;
+  z-index: -1;
+}
+
+.influencers__star {
+  position: absolute;
+  top: -13%;
+  left: 0;
+  width: 3rem;
 }

@@ -18,14 +18,17 @@
         <div class="nav__logo">Yoga</div>
         <ul class="nav__links">
           <li>
-            <a href="#" class="nav__link">Home</a>
+            <a href="#home" class="nav__link">Home</a>
           </li>
-          <li><a href="#" class="nav__link">Health</a></li>
-          <li><a href="#" class="nav__link">Routine</a></li>
-          <li><a href="#" class="nav__link">Follow</a></li>
+          <li><a href="#health" class="nav__link">Health</a></li>
+          <li><a href="#routine" class="nav__link">Routine</a></li>
+          <li><a href="#follow" class="nav__link">Follow</a></li>
           <i class="ri-close-fill | nav__close-btn"></i>
         </ul>
-        <div class="nav__menu-btn"><i class="ri-apps-2-line"></i></div>
+        <div class="menu-btns">
+          <i class="ri-moon-line | nav__moon-btn"></i>
+          <i class="ri-apps-2-line | nav__menu-btn"></i>
+        </div>
       </nav>
     </header>
 
@@ -36,21 +39,36 @@
         <div class="home__container grid">
           <div class="home__details">
             <h1 class="home__title">
-              Choose Your Best <span>Yoga</span> Teacher
+              Choose Your
+              <div class="home__box">
+                Best
+                <div class="home__colored-text">Yoga</div>
+              </div>
+              Teacher
+              <div class="home__star">
+                <img src="/star-img.svg" alt="" />
+              </div>
             </h1>
-            <div class="home__star"></div>
-            <div class="home__circle"></div>
             <p class="home__description">
               Calm your mind and body with the best yoga teachers available,
               relax your day and stay positive.
             </p>
-            <span class="home__btn btn--primary">
-              <a href="#" class="home__link">Get Started</a>
+            <div class="home__circle">
+              <img src="/circle-img.svg" alt="circle logo" />
+            </div>
+            <div class="home__btn btn--primary">
+              <a href="#" class="home__link">Get Started Free</a>
               <i class="ri-arrow-right-line"></i>
-            </span>
+            </div>
             <div class="home__info">
-              <div class="info__class">300+ Yoga Classes</div>
-              <div class="info__members">40+ Participants</div>
+              <div class="info__box">
+                <p class="info__num">300+</p>
+                <p>Yoga Classes</p>
+              </div>
+              <div class="info__box">
+                <p class="info__num">40+</p>
+                <p>Participants</p>
+              </div>
             </div>
           </div>
           <img
@@ -66,20 +84,26 @@
         <div class="influencers__container grid">
           <div class="influencers__image">
             <p class="influencers__number">#01</p>
-            <img src="/list-yoga.png" alt="woman in a yoga position" />
+
+            <div class="image__wrapper">
+              <img src="/list-yoga.png" alt="woman in a yoga position" />
+            </div>
           </div>
           <div class="influencers__info">
-            <div class="influencers__star"></div>
+            <img src="/star-2-img.svg" alt="" class="influencers__star" />
+
             <p class="influencers__text">
               Get a list of specific influencers in your niche at your
               fingertips so you can focus on managing your status.
             </p>
             <div class="influencers__btn">
-              <div class="btn__outline"></div>
-              <span class="next__btn"
-                ><a href="#" class="next__btn__link">Next</a>
-                <i class="ri-arrow-right-line"></i>
-              </span>
+              <div class="btn__outline">
+                <img src="/ellipse-img.svg" alt="ellipse icon" />
+                <div class="next__btn">
+                  <a href="#">Next</a>
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </div>
             </div>
           </div>
         </div>
