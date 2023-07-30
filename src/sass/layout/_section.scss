@@ -69,9 +69,9 @@
 }
 
 // Influencers
-.influencers__container {
-  gap: 4rem;
-}
+// .influencers__container {
+//   gap: 4rem;
+// }
 .influencers__image {
   display: flex;
   align-items: center;
@@ -102,7 +102,31 @@
 
 .influencers__star {
   position: absolute;
-  top: -13%;
+  top: 0.3rem;
   left: 0;
   width: 3rem;
+}
+
+.influencers__text {
+  margin-top: 2rem;
+}
+
+.influencers__btn {
+  display: flex;
+  margin-inline: auto;
+}
+
+.next__btn {
+  margin-left: -5.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+
+  &:hover {
+    i {
+      transform: translateX(0.25rem);
+      transition: transform 300ms;
+    }
+  }
 }
