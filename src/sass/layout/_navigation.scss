@@ -24,7 +24,7 @@
   position: fixed;
   top: 0;
   right: -100%;
-  transition: right 300ms;
+  transition: right 500ms;
   padding: 4rem 1rem 0 3rem;
   background-color: hsla(0, 0%, 100%, 0.3);
   backdrop-filter: blur(24px);
@@ -57,4 +57,11 @@
 .active {
   right: 0;
   transition: right 300ms;
+}
+
+.current {
+  background: c.$gradient-color;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 }

@@ -60,7 +60,7 @@
 
 .home__info {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .info__num {
@@ -69,9 +69,7 @@
 }
 
 // Influencers
-// .influencers__container {
-//   gap: 4rem;
-// }
+
 .influencers__image {
   display: flex;
   align-items: center;
@@ -181,4 +179,58 @@
   width: max-content;
   margin-top: 2rem;
   margin-inline: auto;
+}
+
+// Routine
+.routine__container {
+  gap: 3rem;
+}
+
+.routine__img__wrapper {
+  position: relative;
+  z-index: -1;
+  height: 18rem;
+  max-width: 280px;
+  margin-inline: auto;
+  img {
+    width: 240px;
+    border: 5px solid c.$body-color;
+    border-radius: 100px;
+  }
+
+  .routine-img-2 {
+    position: absolute;
+    left: 1.2rem;
+    bottom: 0.5rem;
+    z-index: -1;
+  }
+}
+
+.routine__tag {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: c.$white-color;
+  padding: 0.25em;
+  border-radius: 10px;
+
+  .tags__text,
+  i {
+    font-size: t.$smaller-font-size;
+    background: c.$gradient-color;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+}
+
+.video-tag {
+  top: 1rem;
+  right: 0;
+}
+
+.trainer-tag {
+  left: 0;
+  bottom: 1.5rem;
 }
