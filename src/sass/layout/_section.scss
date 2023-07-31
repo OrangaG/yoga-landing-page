@@ -76,7 +76,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .influencers__number {
@@ -129,4 +129,56 @@
       transition: transform 300ms;
     }
   }
+}
+
+// Health
+.health__container {
+  gap: 3rem;
+}
+
+.health__image__wrapper {
+  position: relative;
+  z-index: -1;
+}
+.health__tag {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  border-radius: 7px;
+  background-color: c.$white-color;
+  padding: 0.5em;
+  font-size: t.$small-font-size;
+}
+
+.row {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+.bottom {
+  bottom: 0;
+  right: 0;
+}
+.tag__number {
+  background: c.$gradient-color;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.ri-heart-fill {
+  color: c.$heart-color;
+  background-color: c.$heart-color-bg;
+  border-radius: 50%;
+  border: 1px solid c.$heart-color;
+  padding: 0.2em;
+  font-size: 1rem;
+}
+
+.health__btn {
+  display: flex;
+  width: max-content;
+  margin-top: 2rem;
+  margin-inline: auto;
 }
