@@ -1,5 +1,6 @@
 @use "../base/typography" as t;
 @use "../abstracts/colors" as c;
+@use "../abstracts/mixins" as m;
 
 .section {
   padding-block: 5rem 1rem;
@@ -233,4 +234,37 @@
 .trainer-tag {
   left: 0;
   bottom: 1.5rem;
+}
+
+//Follow
+.follow__container {
+  justify-items: center;
+
+  img {
+    width: 200px;
+    border-radius: 100px;
+    z-index: -1;
+  }
+}
+
+.hashtag {
+  background: c.$gradient-color;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.round {
+  flex-direction: column;
+  gap: 0;
+  border-radius: 50%;
+}
+
+.rotate-up {
+  rotate: 15deg;
+}
+
+.rotate-down {
+  margin-top: 1rem;
+  rotate: -15deg;
 }
