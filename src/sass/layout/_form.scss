@@ -1,0 +1,11 @@
+@use "../base/typography" as t;
+
+input {
+  display: flex;
+  padding: 1em 0.75em;
+  width: 80%;
+  font-size: t.$smaller-font-size;
+  border-radius: 10px;
+  outline-color: transparent;
+  margin-inline: auto;
+}

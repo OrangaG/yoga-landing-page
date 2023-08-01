@@ -1,7 +1,14 @@
-@use "../abstracts/colors" as c;
-
 $title-color: hsl(260, 64%, 85%);
 $text-color: hsl(260, 20%, 65%);
 $body-color: hsl(260, 64%, 10%);
-$container-color: hsl(260, 32%, 24%);
+//   $container-color: hsl(260, 32%, 24%);
 $header-blur: hsla(0, 0%, 10%, 0.3);
+
+body.dark-theme {
+  --body-color: hsl(260, 64%, 10%);
+  --text-color: hsl(260, 20%, 65%);
+  --title-color: hsl(260, 64%, 85%);
+  --container-color: hsl(260, 32%, 24%);
+  --header-blur: hsla(0, 0%, 10%, 0.3);
+  --footer-bg: hsl(260, 64%, 10%);
+}

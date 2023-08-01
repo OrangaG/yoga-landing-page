@@ -26,7 +26,3 @@ $breakpoint-small: 320px;
     @content;
   }
 }
-
-@mixin dark-theme($secondary-color) {
-  @content;
-}

@@ -26,14 +26,14 @@
   right: -100%;
   transition: right 500ms;
   padding: 4rem 1rem 0 3rem;
-  background-color: hsla(0, 0%, 100%, 0.3);
+  background-color: var(--header-blur);
   backdrop-filter: blur(24px);
   height: 100%;
   width: 75%;
 }
 
 .nav__link {
-  color: c.$text-color;
+  color: var(--text-color);
 }
 
 .menu-btns {

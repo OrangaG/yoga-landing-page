@@ -10,15 +10,16 @@ button {
 }
 
 body {
-  background-color: c.$body-color;
-  color: c.$text-color;
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: background 400ms;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  color: c.$title-color;
+  color: var(--title-color);
   font-weight: t.$font-medium;
 }
 
