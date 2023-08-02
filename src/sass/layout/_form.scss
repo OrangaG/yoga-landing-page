@@ -1,5 +1,5 @@
 @use "../base/typography" as t;
-
+@use "../abstracts/colors" as c;
 input {
   display: flex;
   padding: 1em 0.75em;
@@ -7,5 +7,6 @@ input {
   font-size: t.$smaller-font-size;
   border-radius: 10px;
   outline-color: transparent;
+  color: c.$first-color;
   margin-inline: auto;
 }

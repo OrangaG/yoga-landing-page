@@ -36,7 +36,7 @@
     background: c.$gradient-color;
     padding: 0.3rem;
     border-radius: 7px;
-    color: c.$body-color;
+    color: c.$white-color;
     transform: rotate(10deg);
   }
 }
@@ -248,14 +248,19 @@
 //Follow
 .follow__container {
   justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
 
   img {
-    width: 200px;
     border: 5px solid var(--container-color);
     transition: border 400ms;
     border-radius: 100px;
     z-index: -1;
   }
+}
+
+.follow__text {
+  grid-column: span 2;
 }
 
 .hashtag {
@@ -269,6 +274,12 @@
   flex-direction: column;
   gap: 0;
   border-radius: 50%;
+}
+
+.rotate-up,
+.rotate-down {
+  width: 230px;
+  grid-column: span 2;
 }
 
 .rotate-up {
