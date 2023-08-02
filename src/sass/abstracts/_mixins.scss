@@ -1,5 +1,7 @@
-$breakpoint-medium: 1152px;
-$breakpoint-small: 320px;
+$breakpoint-large: 1152px;
+$breakpoint-medium: 767px;
+$breakpoint-medium-small: 600px;
+$breakpoint-small: 375px;
 
 @mixin screen($size, $type: min, $pixels: $breakpoint-small) {
   @if $size == "small" {

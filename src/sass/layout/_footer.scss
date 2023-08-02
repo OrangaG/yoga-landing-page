@@ -6,6 +6,10 @@
   transition: background 400ms;
   color: c.$text-color-light;
 
+  .grid {
+    place-items: inherit;
+  }
+
   h3 {
     color: inherit;
     font-size: t.$h2-font-size;

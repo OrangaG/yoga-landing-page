@@ -19,7 +19,7 @@ $font-regular: 400;
 $font-medium: 500;
 
 /*========== Responsive typography ==========*/
-@include m.screen(medium) {
+@include m.screen(large) {
   :root {
     $biggest-font-size: 6rem;
     $bigger-font-size: 4rem;

@@ -1,6 +1,5 @@
 @use "../base/typography" as t;
 @use "../abstracts/colors" as c;
-@use "../abstracts/mixins" as m;
 
 .section {
   padding-block: 5rem 1rem;
@@ -74,6 +73,7 @@
 
 .influencers__image {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
@@ -93,7 +93,7 @@
   transition: background 400ms;
   border-radius: 100px;
   height: 100px;
-  width: 200px;
+  width: 220px;
 }
 
 .influencers__info {
@@ -248,8 +248,7 @@
 //Follow
 .follow__container {
   justify-items: center;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 2rem;
 
   img {
     border: 5px solid var(--container-color);
@@ -257,10 +256,6 @@
     border-radius: 100px;
     z-index: -1;
   }
-}
-
-.follow__text {
-  grid-column: span 2;
 }
 
 .hashtag {
@@ -276,42 +271,66 @@
   border-radius: 50%;
 }
 
-.rotate-up,
-.rotate-down {
-  width: 230px;
+.follow__content-1 {
+  display: grid;
+  grid-template-columns: 130px 130px;
+  gap: 0.5rem;
+}
+
+.follow__info {
   grid-column: span 2;
 }
 
+.follow__content-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2rem;
+}
+
+.rotate-up,
+.rotate-down {
+  width: 230px;
+}
+
+.tall-img-2 {
+  margin-top: 4rem;
+}
 .rotate-up {
   rotate: 15deg;
+  transform: translateX(-1.5rem);
 }
 
 .rotate-down {
   margin-top: 1rem;
   rotate: -15deg;
+  transform: translateX(1.5rem);
 }
 
 // Join section
-.join {
-  display: flex;
-  justify-content: center;
-}
-.join__container {
-  justify-content: center;
-  width: 95%;
+
+.join__info {
+  display: grid;
+  row-gap: 1rem;
+  justify-items: center;
   background: c.$gradient-color;
-  padding: 1.5em 0.75em;
+  padding: 2em 0.35em;
   color: c.$white-color;
   border-radius: 20px;
 
   .section__title {
     color: inherit;
     margin-bottom: 0;
+    font-size: t.$h1-font-size;
   }
 }
 
+.join__text {
+  width: 90%;
+  text-align: center;
+  font-size: t.$small-font-size;
+}
 .join__btn {
-  width: 80%;
+  width: 100%;
   justify-content: center;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
     rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,

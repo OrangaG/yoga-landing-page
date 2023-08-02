@@ -1,12 +1,16 @@
 @use "../base/typography" as t;
 @use "../abstracts/colors" as c;
+
+form {
+  width: 80%;
+  margin-inline: auto;
+}
 input {
   display: flex;
-  padding: 1em 0.75em;
-  width: 80%;
+  padding: 1.5em 0 1.5em 2em;
+  width: 100%;
   font-size: t.$smaller-font-size;
-  border-radius: 10px;
+  border-radius: 50px;
   outline-color: transparent;
   color: c.$first-color;
-  margin-inline: auto;
 }
