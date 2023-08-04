@@ -7,19 +7,19 @@
   color: c.$text-color-light;
 
   .grid {
-    place-items: inherit;
+    gap: 2rem;
   }
 
   h3 {
     color: inherit;
-    font-size: t.$h2-font-size;
+    font-size: var(--h2-font-size);
     margin-bottom: 0.5rem;
   }
 }
 
 .footer__logo {
-  font-size: t.$h1-font-size;
-  font-weight: t.$font-medium;
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-medium);
   margin-bottom: 1rem;
   background: c.$gradient-color;
   color: transparent;
@@ -27,11 +27,10 @@
   -webkit-background-clip: text;
 }
 
-.footer__contact {
-  display: grid;
-  gap: 2rem;
+.footer__description {
+  row-gap: 2rem;
+  padding-bottom: 2rem;
   border-bottom: 1px solid c.$text-color-light;
-  padding-bottom: 2em;
 }
 
 .footer__socials {
@@ -39,9 +38,10 @@
   justify-content: center;
   gap: 1.5rem;
   font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .footer__copy {
-  font-size: t.$smaller-font-size;
+  font-size: var(--smaller-font-size);
   text-align: center;
 }

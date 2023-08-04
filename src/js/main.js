@@ -6,6 +6,7 @@ const iconTheme = "ri-sun-line";
 const nav = document.querySelector(".nav__links");
 const main = document.querySelector(".main");
 const footer = document.querySelector(".footer");
+const scrollBtn = document.getElementById("scroll-up");
 // Get all the sections that have ids
 const sections = document.querySelectorAll("section[id]");
 
@@ -58,6 +59,13 @@ function addBlur() {
     : header.classList.remove("blur-header");
 }
 
+function scrollUp() {
+  // When the scroll is higher than 350vh add the show-scroll class
+  window.scrollY >= 350
+    ? scrollBtn.classList.add("show-scroll")
+    : scrollBtn.classList.remove("show-scroll");
+}
+
 menuBtn.addEventListener("click", () => {
   nav.classList.add("active");
 });
@@ -67,3 +75,23 @@ closeNav(footer);
 
 window.addEventListener("scroll", addBlur);
 window.addEventListener("scroll", navHighlighter);
+window.addEventListener("scroll", scrollUp);
+
+// Scroll Reveal Animation
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "60px",
+  duration: 2500,
+  delay: 400,
+});
+
+sr.reveal(
+  ".home__details, .influencers__container, .join__info, .footer__container"
+);
+sr.reveal(".home__image", { origin: "bottom" });
+sr.reveal(".health__image__wrapper, .routine__img__wrapper, .rotate-up", {
+  origin: "left",
+});
+sr.reveal(".health__info, .routine__info, .rotate-down", { origin: "right" });
+
+sr.reveal(".follow__content-1", { interval: 100 });

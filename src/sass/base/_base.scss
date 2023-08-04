@@ -6,22 +6,38 @@ body,
 input,
 button {
   font-family: t.$body-font;
-  font-size: t.$normal-font-size;
+  font-size: var(--normal-font-size);
 }
 
 body {
   background-color: var(--body-color);
   color: var(--text-color);
   transition: background 400ms;
+
+  scrollbar-width: 1rem;
+  scrollbar-color: var(--body-color);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--text-color);
+  border-radius: 20px;
+  border: 3px solid var(--text-color-light);
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--text-color-light);
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: t.$second-font;
   color: var(--title-color);
-  font-weight: t.$font-medium;
+  font-weight: t.$font-regular;
 }
 
 header {

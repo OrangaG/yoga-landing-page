@@ -1,5 +1,6 @@
 @use "../abstracts/mixins" as m;
 @use "../base/typography" as t;
+@use "../abstracts/colors" as c;
 
 @include m.screen(small) {
   .home__container,
@@ -24,6 +25,17 @@
   .influencers__container {
     .influencers__image {
       flex-direction: row;
+    }
+  }
+
+  .routine__img__wrapper {
+    .video-tag {
+      top: 2rem;
+      right: -2rem;
+    }
+    .trainer-tag {
+      left: -2rem;
+      bottom: 3rem;
     }
   }
 }
@@ -62,10 +74,10 @@
   .join__container {
     .join__info {
       .section__title {
-        font-size: t.$bigger-font-size;
+        font-size: var(--bigger-font-size);
       }
       .join__text {
-        font-size: t.$normal-font-size;
+        font-size: var(--normal-font-size);
       }
     }
   }
@@ -73,6 +85,7 @@
   .follow__container {
     .follow__content-1 {
       grid-template-columns: 160px 160px;
+      row-gap: 3rem;
     }
 
     .rotate-up,
@@ -87,8 +100,7 @@
   .influencers__container,
   .health__container,
   .routine__container,
-  .follow__container,
-  .join__container {
+  .follow__container {
     grid-template-columns: 500px;
     justify-content: center;
     row-gap: 4rem;
@@ -101,7 +113,7 @@
 
   .nav {
     .nav__links {
-      background-color: inherit;
+      background-color: transparent;
       flex-direction: row;
       align-items: center;
       justify-content: center;
@@ -109,6 +121,306 @@
       position: initial;
       margin-left: auto;
       padding: 0;
+    }
+  }
+
+  .influencers__container {
+    .influencers__star {
+      z-index: 1;
+      width: 4rem;
+      left: -1rem;
+      top: -0.7rem;
+    }
+  }
+
+  .join__container {
+    grid-template-columns: 600px;
+    margin-block: 2rem;
+
+    form {
+      display: flex;
+      justify-content: center;
+      background-color: c.$white-color;
+      border-radius: 100px;
+      padding: 0.5em;
+
+      button {
+        margin: 0;
+        width: 60%;
+      }
+    }
+  }
+
+  .footer__container {
+    justify-content: center;
+  }
+  .footer__description {
+    grid-template-columns: repeat(2, max-content);
+    .footer__contact {
+      grid-template-columns: repeat(3, max-content);
+      place-items: end;
+    }
+  }
+}
+
+@include m.screen(large) {
+  .home__container,
+  .influencers__container,
+  .health__container,
+  .routine__container {
+    grid-template-columns: repeat(2, 400px);
+    align-items: center;
+
+    .btn--primary {
+      margin-inline: 0;
+    }
+
+    .section__title {
+      text-align: initial;
+    }
+  }
+
+  .home__container {
+    position: relative;
+    z-index: -1;
+
+    &.grid {
+      column-gap: 2rem;
+    }
+    .home__details {
+      justify-items: start;
+      .home__title {
+        text-align: initial;
+        line-height: 65px;
+      }
+      .home__box {
+        justify-content: flex-start;
+      }
+      .home__star {
+        left: 16rem;
+        top: 5rem;
+      }
+      .home__description {
+        text-align: initial;
+        width: 80%;
+      }
+      .home__circle {
+        position: absolute;
+        top: 45%;
+        left: 3rem;
+      }
+
+      .home__info {
+        gap: 4rem;
+        text-align: initial;
+      }
+    }
+  }
+  .influencers__container {
+    .influencers__image {
+      justify-content: flex-start;
+    }
+    .image__wrapper {
+      width: 250px;
+    }
+    .influencers__info {
+      flex-direction: row;
+    }
+
+    .influencers__text {
+      width: 76%;
+    }
+  }
+
+  .routine__container {
+    &.grid {
+      column-gap: 1.5rem;
+    }
+    .routine__img__wrapper {
+      img {
+        width: 270px;
+      }
+      .routine-img-2 {
+        bottom: -0.5rem;
+      }
+    }
+  }
+
+  .follow__container {
+    grid-template-columns: max-content;
+    gap: 4rem;
+    .follow__content-1 {
+      grid-template-columns: repeat(3, 200px);
+      column-gap: 3rem;
+
+      .tall-img-1 {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .follow__info {
+        grid-column: 2;
+        place-self: center;
+      }
+
+      .tall-img-2 {
+        margin: 0;
+      }
+    }
+
+    .follow__content-2 {
+      grid-template-columns: repeat(2, 350px);
+      align-items: center;
+    }
+    .rotate-up,
+    .rotate-down {
+      width: 320px;
+    }
+
+    .rotate-up {
+      transform: translateX(0);
+    }
+    .rotate-down {
+      transform: translateX(2rem);
+    }
+  }
+
+  .join__container {
+    grid-template-columns: 800px;
+  }
+
+  .footer__container {
+    .footer__description {
+      &.grid {
+        column-gap: 6rem;
+      }
+    }
+    .socials__box {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+@include m.screen(larger) {
+  body {
+    .container {
+      margin-inline: auto;
+    }
+  }
+
+  .nav {
+    width: 1025px;
+  }
+  .home__container,
+  .influencers__container,
+  .routine__container {
+    grid-template-columns: 500px 500px;
+    align-items: center;
+  }
+
+  .home__container {
+    .home__details {
+      .home__title {
+        line-height: 100px;
+      }
+      .home__box {
+        margin-top: 1rem;
+      }
+      .home__star {
+        left: 25rem;
+        top: 8rem;
+        width: 100px;
+      }
+      .home__circle {
+        top: 54%;
+        left: 0;
+      }
+    }
+  }
+
+  .influencers,
+  .health {
+    margin-top: 4rem;
+  }
+  .influencers__image {
+    .image__wrapper {
+      align-items: flex-end;
+      width: 350px;
+      height: 150px;
+    }
+  }
+
+  .health__container {
+    grid-template-columns: 450px 550px;
+  }
+
+  .routine__container {
+    .routine__img__wrapper {
+      max-width: 400px;
+      height: 25rem;
+      img {
+        width: 350px;
+        border-radius: 130px;
+        border-width: 10px;
+      }
+    }
+  }
+  .follow__container {
+    grid-template-columns: 1000px;
+    .follow__content-1 {
+      grid-template-columns: 250px 300px 250px;
+      place-items: center;
+      column-gap: 0;
+      img {
+        width: 210px;
+      }
+    }
+    .follow__content-2 {
+      grid-template-columns: repeat(2, 360px);
+      margin-top: 1rem;
+      column-gap: 1rem;
+      img {
+        width: 350px;
+      }
+    }
+  }
+
+  .join__container {
+    grid-template-columns: 1000px;
+  }
+
+  .footer__container {
+    .footer__description {
+      &.grid {
+        column-gap: 18rem;
+      }
+    }
+  }
+}
+
+@include m.screen(largest) {
+  .nav {
+    width: 1100px;
+  }
+  .home__container,
+  .influencers__container,
+  .routine__container {
+    grid-template-columns: 480px 600px;
+    align-items: center;
+  }
+
+  .health__container {
+    grid-template-columns: 500px 500px;
+  }
+
+  .footer__container {
+    .footer__description {
+      width: 1100px;
+
+      &.grid {
+        column-gap: 22rem;
+      }
     }
   }
 }

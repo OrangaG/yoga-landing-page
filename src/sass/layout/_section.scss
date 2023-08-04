@@ -1,5 +1,5 @@
-@use "../base/typography" as t;
 @use "../abstracts/colors" as c;
+@use "../base/typography" as t;
 
 .section {
   padding-block: 5rem 1rem;
@@ -14,14 +14,17 @@
 .home__title,
 .section__title {
   text-align: center;
-  font-size: t.$bigger-font-size;
+  font-size: var(--bigger-font-size);
   font-family: t.$second-font;
   margin-bottom: 1.5rem;
 }
 
+.home__details {
+  display: grid;
+}
 .home__title {
   position: relative;
-  font-size: t.$biggest-font-size;
+  font-size: var(--biggest-font-size);
   line-height: 70px;
   z-index: -1;
 
@@ -34,7 +37,7 @@
   .home__colored-text {
     background: c.$gradient-color;
     padding: 0.3rem;
-    border-radius: 7px;
+    border-radius: 20px;
     color: c.$white-color;
     transform: rotate(10deg);
   }
@@ -65,8 +68,8 @@
 }
 
 .info__num {
-  font-size: t.$h1-font-size;
-  font-weight: t.$font-medium;
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-medium);
 }
 
 // Influencers section
@@ -81,8 +84,8 @@
 
 .influencers__number {
   color: var(--title-color);
-  font-size: t.$h1-font-size;
-  font-weight: t.$font-medium;
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-medium);
 }
 
 .image__wrapper {
@@ -99,6 +102,8 @@
 .influencers__info {
   position: relative;
   z-index: -1;
+  display: flex;
+  flex-direction: column;
 }
 
 .influencers__star {
@@ -154,7 +159,7 @@
   background-color: var(--container-color);
   transition: background 400ms;
   padding: 0.5em;
-  font-size: t.$small-font-size;
+  font-size: var(--small-font-) size;
 }
 
 .row {
@@ -227,7 +232,7 @@
 
   .tags__text,
   i {
-    font-size: t.$smaller-font-size;
+    font-size: var(--smaller-fon) t-size;
     background: c.$gradient-color;
     color: transparent;
     background-clip: text;
@@ -241,14 +246,14 @@
 }
 
 .trainer-tag {
-  left: 0;
-  bottom: 1.5rem;
+  left: -1rem;
+  bottom: 2rem;
 }
 
 //Follow
 .follow__container {
   justify-items: center;
-  gap: 2rem;
+  row-gap: 2rem;
 
   img {
     border: 5px solid var(--container-color);
@@ -274,7 +279,7 @@
 .follow__content-1 {
   display: grid;
   grid-template-columns: 130px 130px;
-  gap: 0.5rem;
+  row-gap: 0.5rem;
 }
 
 .follow__info {
@@ -320,14 +325,14 @@
   .section__title {
     color: inherit;
     margin-bottom: 0;
-    font-size: t.$h1-font-size;
+    font-size: var(--h1-font-siz) e;
   }
 }
 
 .join__text {
   width: 90%;
   text-align: center;
-  font-size: t.$small-font-size;
+  font-size: var(--small-font-) size;
 }
 .join__btn {
   width: 100%;
